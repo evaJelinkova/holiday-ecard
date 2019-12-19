@@ -1,0 +1,106 @@
+html{
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/281684/contemporary_china_2.png);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.pen-title {
+  text-align: center;
+}
+.click-me {
+  display: inline-block;
+  position: relative;
+  bottom: -50px;
+  width: 100%;
+  text-align: center;
+  color: #999;
+}
+.pen-description {
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+.card {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  -webkit-perspective: 700;
+  margin: 100px auto;
+  cursor: pointer;
+  text-align: center;
+}
+.card p {
+    margin: 0;
+}
+
+.card:hover .face {
+  -webkit-transition: all 0.3s ease-out;
+}
+.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: visible;
+  -webkit-transition: all 0.5s ease-out;
+  -webkit-transform-origin: 0 0;
+}
+.front-face {
+  -webkit-transform: rotateY(-20deg);
+  z-index: 2;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/281684/mountains_cropped.jpg), #27ae60;
+  font-size: 2em;
+  box-sizing: border-box;
+  text-align: center;
+}
+.back-face {
+  background: url(rome.jpg);
+  padding: 15px;
+  text-align:center;
+  box-sizing: border-box;
+  -webkit-transform: rotateY(0deg);
+  z-index: 1;
+  font-size: 1.2em;
+
+}
+
+.card:hover .front-face {
+  -webkit-transform: rotateY(-35deg);
+}
+.card:active .front-face{
+  -webkit-transform: rotateY(-165deg);
+}
+.greeting {
+  color:antiquewhite;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  left:0px;
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 50px;
+}
+.inside-message {
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  font-family: 'Mountains of Christmas', cursive;
+}
+.middle {
+  margin-top: 20%;
+}
+.bottom {
+bottom: 50px;
+}
